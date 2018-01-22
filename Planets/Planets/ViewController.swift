@@ -22,30 +22,53 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        addEarth()
-        print(Planet.Earth.imagename())
+        let sun = createPlanet(.Sun)
+        let x = Planet.Neptune.scaledDistanceFromSun()
+        sun.position = SCNVector3(-x, -0.4, -3.0)
+
+        sun.addChildNode(createPlanet(.Mercury))
+        sun.addChildNode(createPlanet(.Venus))
+        sun.addChildNode(createPlanet(.Earth))
+        sun.addChildNode(createPlanet(.Mars))
+        sun.addChildNode(createPlanet(.Jupiter))
+        sun.addChildNode(createPlanet(.Saturn))
+        sun.addChildNode(createPlanet(.Uranus))
+        sun.addChildNode(createPlanet(.Neptune))
+
+        sceneView.scene.rootNode.addChildNode(sun)
     }
 
     func addEarth() {
-        let earth = createEarth()
+        let earth = createPlanet(.Earth)
         sceneView.scene.rootNode.addChildNode(earth)
     }
 
-    private func createEarth() -> SCNNode {
-        let sphere = SCNSphere(radius: 0.2)
-//        sphere.segmentCount = 50
-        sphere.firstMaterial?.diffuse.contents = Planet.Earth.image()
-        sphere.firstMaterial?.specular.contents = UIImage.init(named: "2k_earth_specular_map.jpg")
-        sphere.firstMaterial?.emission.contents = UIImage.init(named: "2k_earth_clouds.jpg")
+    private func createPlanet(_ planet: Planet) -> SCNNode {
+        let sphere = SCNSphere(radius: planet.scaledRadius())
+        sphere.firstMaterial?.diffuse.contents = planet.image()
 
-        let planet = SCNNode(geometry: sphere)
-        planet.position = SCNVector3(0, -0.4, -1.0)
+        if planet == .Earth {
+            sphere.firstMaterial?.specular.contents = UIImage.init(named: "2k_earth_specular_map.jpg")
+            sphere.firstMaterial?.emission.contents = UIImage.init(named: "2k_earth_clouds.jpg")
+        }
 
-        let action = SCNAction.rotateBy(x: 0, y: CGFloat(360.degreesToRadians), z: 0, duration: 8.0)
-        let forever = SCNAction.repeatForever(action)
-        planet.runAction(forever)
+        let text = SCNText(string: planet.name(), extrusionDepth: 0.03)
+        text.font = UIFont.systemFont(ofSize: 0.1)
+        let textNode = SCNNode(geometry: text)
+        textNode.position = SCNVector3(0, -planet.scaledRadius(), planet.scaledRadius())
 
-        return planet
+        let node = SCNNode(geometry: sphere)
+        node.addChildNode(textNode)
+
+        node.position = SCNVector3(planet.scaledDistanceFromSun(), 0, 0)
+
+        if planet != .Sun {
+            let action = SCNAction.rotateBy(x: 0, y: CGFloat(360.degreesToRadians), z: 0, duration: 8.0)
+            let forever = SCNAction.repeatForever(action)
+            node.runAction(forever)
+        }
+
+        return node
     }
 
     override func didReceiveMemoryWarning() {
