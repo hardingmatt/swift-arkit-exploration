@@ -18,28 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQV-PB-L13">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zQV-PB-L13">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qck-gO-pPZ">
-                                <rect key="frame" x="20" y="547" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qck-gO-pPZ">
+                                <rect key="frame" x="16" y="567" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.24341438262487536" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="CyM-b4-gPc"/>
-                                    <constraint firstAttribute="width" constant="100" id="q6Z-gd-2Va"/>
-                                </constraints>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0wf-Jm-tAF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6d3-T7-F7N">
-                                <rect key="frame" x="255" y="547" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iu6-ZY-U1n">
+                                <rect key="frame" x="147" y="567" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.62298296759214944" blue="0.31697497070948055" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Draw"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6d3-T7-F7N">
+                                <rect key="frame" x="279" y="567" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.97005647419999996" green="0.82373332980000002" blue="0.31787735220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="2ZR-LB-0BP"/>
-                                    <constraint firstAttribute="height" constant="100" id="tXl-48-boJ"/>
-                                </constraints>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DvB-B2-0FH"/>
@@ -47,19 +48,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="zQV-PB-L13" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0Rm-LX-oKS"/>
-                            <constraint firstItem="zQV-PB-L13" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="73J-s3-ngo"/>
-                            <constraint firstItem="Qck-gO-pPZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7Ef-4r-9fN"/>
-                            <constraint firstItem="zQV-PB-L13" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8gd-CA-bIL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6d3-T7-F7N" secondAttribute="trailing" constant="20" id="eW8-DY-ybb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qck-gO-pPZ" secondAttribute="bottom" constant="20" id="kdd-5k-1f8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6d3-T7-F7N" secondAttribute="bottom" constant="20" id="kgm-MM-1kw"/>
-                            <constraint firstItem="zQV-PB-L13" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rcL-gx-fK1"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="drawButton" destination="iu6-ZY-U1n" id="pxy-hb-T7E"/>
                         <outlet property="sceneView" destination="zQV-PB-L13" id="mlt-Yq-SGE"/>
                     </connections>
                 </viewController>

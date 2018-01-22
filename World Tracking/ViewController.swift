@@ -9,16 +9,56 @@
 import UIKit
 import ARKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ARSCNViewDelegate {
+
+
+
+    @IBOutlet weak var drawButton: UIButton!
+
 
     @IBOutlet weak var sceneView: ARSCNView!
     let configuration = ARWorldTrackingConfiguration()
+
+//    var pointerNode: SCNNode?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         self.sceneView.session.run(configuration)
+        self.sceneView.showsStatistics = true
         self.sceneView.autoenablesDefaultLighting = true
+
+        self.sceneView.delegate = self
+    }
+
+    func getCurrentCameraPosition(pointOfView: SCNNode, percentOrientation: Float) -> SCNVector3 {
+        let transform = pointOfView.transform
+        let orientation = SCNVector3(-transform.m31 * percentOrientation, -transform.m32 * percentOrientation, -transform.m33 * percentOrientation)
+        let location = SCNVector3(transform.m41, transform.m42, transform.m43)
+        let currentPositionOfCamera = location + orientation
+        return currentPositionOfCamera
+    }
+
+    func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
+//        print(time)
+        guard let pointOfView = sceneView.pointOfView else { return }
+
+        let currentPositionOfCamera = getCurrentCameraPosition(pointOfView: pointOfView, percentOrientation: 0.1)
+
+        DispatchQueue.main.async {
+//            if let pointer = self.pointerNode, pointer.parent != nil {
+//                pointer.removeFromParentNode()
+//            }
+
+            if self.drawButton.isHighlighted {
+                let penTip = self.makeNode(geometry: SCNSphere(radius: 0.02), color: .blue, position: currentPositionOfCamera)
+                self.sceneView.scene.rootNode.addChildNode(penTip)
+//                self.pointerNode = nil
+//            } else {
+//                self.pointerNode = self.makeNode(geometry: SCNSphere(radius: 0.01), color: .red, position: currentPositionOfCamera)
+//                self.sceneView.scene.rootNode.addChildNode(self.pointerNode!)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +68,7 @@ class ViewController: UIViewController {
 
     @IBAction func reset(_ sender: Any) {
         restartSession()
+        self.sceneView.delegate = self
     }
 
     func restartSession() {
@@ -55,20 +96,24 @@ class ViewController: UIViewController {
     }
 
     func addHouse() {
+        guard let pointOfView = sceneView.pointOfView else { return }
+        let currentPositionOfCamera = getCurrentCameraPosition(pointOfView: pointOfView, percentOrientation: 1.0)
+
         let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
         let pyramid = SCNPyramid(width: 0.1, height: 0.05, length: 0.1)
         let door = SCNPlane(width: 0.02, height: 0.05)
 
 //        let x = randomNumbers(firstNum: -0.5, secondNum: 0.5)
-        let house = makeNode(geometry: box, color: .blue, position: SCNVector3(0, -0.3, -0.6))
+        let house = makeNode(geometry: box, color: .blue, position: currentPositionOfCamera)
         house.addChildNode(makeNode(geometry: pyramid, color: .red, position: SCNVector3(0, 0.05, 0)))
         house.addChildNode(makeNode(geometry: door, color: .green, position: SCNVector3(0, -0.025, 0.052)))
+//        house.eulerAngles = SCNVector3(Float(180.degreesToRadians), 0, 0)
         self.sceneView.scene.rootNode.addChildNode(house)
     }
 
     func makeNode(geometry: SCNGeometry, color: UIColor, position: SCNVector3) -> SCNNode {
         geometry.firstMaterial?.diffuse.contents = color
-        geometry.firstMaterial?.specular.contents = UIColor.white
+//        geometry.firstMaterial?.specular.contents = UIColor.white
         let node = SCNNode(geometry: geometry)
         node.position = position
         return node
@@ -129,5 +174,14 @@ class ViewController: UIViewController {
     func randomNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat {
         return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
     }
+}
+
+extension Int {
+
+    var degreesToRadians: Double { return Double(self) * .pi/180}
+}
+
+func +(left: SCNVector3, right: SCNVector3) -> SCNVector3 {
+    return SCNVector3(left.x + right.x, left.y + right.y, left.z + right.z)
 }
 
