@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37694B0A2018C2E300EE3178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37694B092018C2E300EE3178 /* AppDelegate.swift */; };
+		37694B0C2018C2E300EE3178 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 37694B0B2018C2E300EE3178 /* art.scnassets */; };
+		37694B0E2018C2E300EE3178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37694B0D2018C2E300EE3178 /* ViewController.swift */; };
+		37694B112018C2E300EE3178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37694B0F2018C2E300EE3178 /* Main.storyboard */; };
+		37694B132018C2E300EE3178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37694B122018C2E300EE3178 /* Assets.xcassets */; };
+		37694B162018C2E300EE3178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37694B142018C2E300EE3178 /* LaunchScreen.storyboard */; };
+		37694B212018C2E300EE3178 /* FloorIsLavaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37694B202018C2E300EE3178 /* FloorIsLavaTests.swift */; };
+		37694B2C2018C2E300EE3178 /* FloorIsLavaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37694B2B2018C2E300EE3178 /* FloorIsLavaUITests.swift */; };
+		37694B3A2018F4D600EE3178 /* OccludingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37694B392018F4D600EE3178 /* OccludingNode.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37694B1D2018C2E300EE3178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37694AFE2018C2E300EE3178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37694B052018C2E300EE3178;
+			remoteInfo = FloorIsLava;
+		};
+		37694B282018C2E300EE3178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37694AFE2018C2E300EE3178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37694B052018C2E300EE3178;
+			remoteInfo = FloorIsLava;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37694B062018C2E300EE3178 /* FloorIsLava.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloorIsLava.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37694B092018C2E300EE3178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37694B0B2018C2E300EE3178 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		37694B0D2018C2E300EE3178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37694B102018C2E300EE3178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37694B122018C2E300EE3178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37694B152018C2E300EE3178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37694B172018C2E300EE3178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37694B1C2018C2E300EE3178 /* FloorIsLavaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloorIsLavaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37694B202018C2E300EE3178 /* FloorIsLavaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorIsLavaTests.swift; sourceTree = "<group>"; };
+		37694B222018C2E300EE3178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37694B272018C2E300EE3178 /* FloorIsLavaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloorIsLavaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37694B2B2018C2E300EE3178 /* FloorIsLavaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorIsLavaUITests.swift; sourceTree = "<group>"; };
+		37694B2D2018C2E300EE3178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37694B392018F4D600EE3178 /* OccludingNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OccludingNode.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37694B032018C2E300EE3178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37694B192018C2E300EE3178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37694B242018C2E300EE3178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37694AFD2018C2E300EE3178 = {
+			isa = PBXGroup;
+			children = (
+				37694B082018C2E300EE3178 /* FloorIsLava */,
+				37694B1F2018C2E300EE3178 /* FloorIsLavaTests */,
+				37694B2A2018C2E300EE3178 /* FloorIsLavaUITests */,
+				37694B072018C2E300EE3178 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37694B072018C2E300EE3178 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37694B062018C2E300EE3178 /* FloorIsLava.app */,
+				37694B1C2018C2E300EE3178 /* FloorIsLavaTests.xctest */,
+				37694B272018C2E300EE3178 /* FloorIsLavaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37694B082018C2E300EE3178 /* FloorIsLava */ = {
+			isa = PBXGroup;
+			children = (
+				37694B092018C2E300EE3178 /* AppDelegate.swift */,
+				37694B0B2018C2E300EE3178 /* art.scnassets */,
+				37694B0D2018C2E300EE3178 /* ViewController.swift */,
+				37694B392018F4D600EE3178 /* OccludingNode.swift */,
+				37694B0F2018C2E300EE3178 /* Main.storyboard */,
+				37694B122018C2E300EE3178 /* Assets.xcassets */,
+				37694B142018C2E300EE3178 /* LaunchScreen.storyboard */,
+				37694B172018C2E300EE3178 /* Info.plist */,
+			);
+			path = FloorIsLava;
+			sourceTree = "<group>";
+		};
+		37694B1F2018C2E300EE3178 /* FloorIsLavaTests */ = {
+			isa = PBXGroup;
+			children = (
+				37694B202018C2E300EE3178 /* FloorIsLavaTests.swift */,
+				37694B222018C2E300EE3178 /* Info.plist */,
+			);
+			path = FloorIsLavaTests;
+			sourceTree = "<group>";
+		};
+		37694B2A2018C2E300EE3178 /* FloorIsLavaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				37694B2B2018C2E300EE3178 /* FloorIsLavaUITests.swift */,
+				37694B2D2018C2E300EE3178 /* Info.plist */,
+			);
+			path = FloorIsLavaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37694B052018C2E300EE3178 /* FloorIsLava */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37694B302018C2E300EE3178 /* Build configuration list for PBXNativeTarget "FloorIsLava" */;
+			buildPhases = (
+				37694B022018C2E300EE3178 /* Sources */,
+				37694B032018C2E300EE3178 /* Frameworks */,
+				37694B042018C2E300EE3178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloorIsLava;
+			productName = FloorIsLava;
+			productReference = 37694B062018C2E300EE3178 /* FloorIsLava.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37694B1B2018C2E300EE3178 /* FloorIsLavaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37694B332018C2E300EE3178 /* Build configuration list for PBXNativeTarget "FloorIsLavaTests" */;
+			buildPhases = (
+				37694B182018C2E300EE3178 /* Sources */,
+				37694B192018C2E300EE3178 /* Frameworks */,
+				37694B1A2018C2E300EE3178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37694B1E2018C2E300EE3178 /* PBXTargetDependency */,
+			);
+			name = FloorIsLavaTests;
+			productName = FloorIsLavaTests;
+			productReference = 37694B1C2018C2E300EE3178 /* FloorIsLavaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37694B262018C2E300EE3178 /* FloorIsLavaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37694B362018C2E300EE3178 /* Build configuration list for PBXNativeTarget "FloorIsLavaUITests" */;
+			buildPhases = (
+				37694B232018C2E300EE3178 /* Sources */,
+				37694B242018C2E300EE3178 /* Frameworks */,
+				37694B252018C2E300EE3178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37694B292018C2E300EE3178 /* PBXTargetDependency */,
+			);
+			name = FloorIsLavaUITests;
+			productName = FloorIsLavaUITests;
+			productReference = 37694B272018C2E300EE3178 /* FloorIsLavaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37694AFE2018C2E300EE3178 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Matt Harding";
+				TargetAttributes = {
+					37694B052018C2E300EE3178 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					37694B1B2018C2E300EE3178 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 37694B052018C2E300EE3178;
+					};
+					37694B262018C2E300EE3178 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 37694B052018C2E300EE3178;
+					};
+				};
+			};
+			buildConfigurationList = 37694B012018C2E300EE3178 /* Build configuration list for PBXProject "FloorIsLava" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37694AFD2018C2E300EE3178;
+			productRefGroup = 37694B072018C2E300EE3178 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37694B052018C2E300EE3178 /* FloorIsLava */,
+				37694B1B2018C2E300EE3178 /* FloorIsLavaTests */,
+				37694B262018C2E300EE3178 /* FloorIsLavaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37694B042018C2E300EE3178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37694B0C2018C2E300EE3178 /* art.scnassets in Resources */,
+				37694B162018C2E300EE3178 /* LaunchScreen.storyboard in Resources */,
+				37694B132018C2E300EE3178 /* Assets.xcassets in Resources */,
+				37694B112018C2E300EE3178 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37694B1A2018C2E300EE3178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37694B252018C2E300EE3178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37694B022018C2E300EE3178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37694B0E2018C2E300EE3178 /* ViewController.swift in Sources */,
+				37694B0A2018C2E300EE3178 /* AppDelegate.swift in Sources */,
+				37694B3A2018F4D600EE3178 /* OccludingNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37694B182018C2E300EE3178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37694B212018C2E300EE3178 /* FloorIsLavaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37694B232018C2E300EE3178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37694B2C2018C2E300EE3178 /* FloorIsLavaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37694B1E2018C2E300EE3178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37694B052018C2E300EE3178 /* FloorIsLava */;
+			targetProxy = 37694B1D2018C2E300EE3178 /* PBXContainerItemProxy */;
+		};
+		37694B292018C2E300EE3178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37694B052018C2E300EE3178 /* FloorIsLava */;
+			targetProxy = 37694B282018C2E300EE3178 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37694B0F2018C2E300EE3178 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37694B102018C2E300EE3178 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37694B142018C2E300EE3178 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37694B152018C2E300EE3178 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37694B2E2018C2E300EE3178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37694B2F2018C2E300EE3178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37694B312018C2E300EE3178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW3MX3HAZP;
+				INFOPLIST_FILE = FloorIsLava/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hardingmatt.FloorIsLava;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37694B322018C2E300EE3178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW3MX3HAZP;
+				INFOPLIST_FILE = FloorIsLava/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hardingmatt.FloorIsLava;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		37694B342018C2E300EE3178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW3MX3HAZP;
+				INFOPLIST_FILE = FloorIsLavaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hardingmatt.FloorIsLavaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorIsLava.app/FloorIsLava";
+			};
+			name = Debug;
+		};
+		37694B352018C2E300EE3178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW3MX3HAZP;
+				INFOPLIST_FILE = FloorIsLavaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hardingmatt.FloorIsLavaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorIsLava.app/FloorIsLava";
+			};
+			name = Release;
+		};
+		37694B372018C2E300EE3178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW3MX3HAZP;
+				INFOPLIST_FILE = FloorIsLavaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hardingmatt.FloorIsLavaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FloorIsLava;
+			};
+			name = Debug;
+		};
+		37694B382018C2E300EE3178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW3MX3HAZP;
+				INFOPLIST_FILE = FloorIsLavaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hardingmatt.FloorIsLavaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FloorIsLava;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37694B012018C2E300EE3178 /* Build configuration list for PBXProject "FloorIsLava" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37694B2E2018C2E300EE3178 /* Debug */,
+				37694B2F2018C2E300EE3178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37694B302018C2E300EE3178 /* Build configuration list for PBXNativeTarget "FloorIsLava" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37694B312018C2E300EE3178 /* Debug */,
+				37694B322018C2E300EE3178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37694B332018C2E300EE3178 /* Build configuration list for PBXNativeTarget "FloorIsLavaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37694B342018C2E300EE3178 /* Debug */,
+				37694B352018C2E300EE3178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37694B362018C2E300EE3178 /* Build configuration list for PBXNativeTarget "FloorIsLavaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37694B372018C2E300EE3178 /* Debug */,
+				37694B382018C2E300EE3178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37694AFE2018C2E300EE3178 /* Project object */;
+}
